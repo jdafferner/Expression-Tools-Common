@@ -1,0 +1,72 @@
+		String separator = System.getProperty(File.separator);
+		String lineSeparator = System.lineSeparator();
+		String fetchFilePathComponents = "(?!\\|\\/)([\\w+\\. -]+)";
+		Pattern filePathWords = Pattern.compile(fetchFilePathComponents);
+		
+		
+		try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+
+			stream.forEach(System.out::println);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		D:\\Users\\Iota\\Development\\projects\\git\\MenuBuilder\\docs\\textfiles\\TestMenuText.txt
+		
+		
+			String sPath = in.nextLine();
+			aPath = Paths.get(sPath);
+				try {
+					readFile(aPath);
+					return true;
+				} catch (IOException e) {
+					System.out.println("Problem passing path to method readFile");
+					continue;
+				}
+				
+				Key event
+				 doType(KeyEvent.VK_A);
+				 getKeyCode
+				 
+				         while (stdin.hasNext()) {
+            System.out.println(Math.abs(stdin.nextLong() - stdin.nextLong()));
+            
+            		for(int x = 0; x < sPath.length(); x++) {
+			if(sPath.charAt(x)== xMatch && sPath.charAt(x+1) != xMatch){
+				cPath = cPath + "\\\\";
+				x++;
+			}
+			else {
+				sPath.charAt(x);
+				cPath = cPath + sPath.charAt(x);
+			}
+		}
+		System.out.println(sPath);
+		
+		
+		C:\Eclipse_Oxygen\External_Jars\commons-io-2.5-bin\LICENSE.txt
+		
+		LinkedHashMaps examples = https://www.programcreek.com/java-api-examples/index.php?api=java.util.LinkedHashMap
+		
+		
+		/MenuBuiler/MenuBuilder/docs/textfiles
+		/MenuBuiler
+		
+		Hashmap Implementation
+			private HashMap<String, Pattern> buildRegexMap() {
+		 HashMap<String, Pattern> map= new HashMap<String, Pattern>(10,(float) .75);
+		try {
+			Scanner filescan = new Scanner(data);
+			filescan.forEachRemaining(String ->{
+				String [] kv = String.split(","); 
+				RegexNode rnode = new RegexNode(kv[0],kv[1]);
+				map.put(rnode.getName(),rnode.getPattern());
+				//System.out.printf("%s", rnode.toString());
+			});
+			filescan.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("Error reading regex file");
+			return null;
+		}
+		return map;	
+	}

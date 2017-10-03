@@ -1,0 +1,4 @@
+singleWindowsFileSeparator,\\
+doubleWindowsFileSeparator,\\\\
+windowsFilePathModel,(?=[A-Z]:\\\\)
+nixxyFilePathModel,(?=\\/\\S)

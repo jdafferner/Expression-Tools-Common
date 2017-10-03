@@ -1,0 +1,9 @@
+A text file containing
+menu header text and
+other assorted stuff.
+There should be several lines of
+text using:
+Numbers like 1233456
+  A line with a tab at the beginning.
+  And a weird looking item sorta like..
+  /bin/hello/Ima/path.txt
