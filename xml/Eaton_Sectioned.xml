@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Syntax Ldap.Serveer[x].Whatever x = Ldap Server Number-->
+<SET_OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].IsEnable">0|0<!--Boolean as Int 0 | 1 , Read Write--></OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].ServerName">LDAP Server1|LDAP Server2<!--String 49 Character Max, Read Write--></OBJECT>
+	<OBJECT name="System.Network.Ldap.Server[x].Port">389|389<!--Int Range 1 -65535--></OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].TimeOut">10|10<!--Int Range 0 - 65535--></OBJECT>
+<OBJECT name="System.Network.Ldap.AuthMechanism">0<!--Boolean 0 Simple | 1 MD5--></OBJECT>
+<OBJECT name="System.Network.Ldap.CheckServerCertificat">0</OBJECT>
+<OBJECT name="System.Network.Ldap.SSLMode">0</OBJECT>
+<OBJECT name="System.Network.Ldap.ServerType">0</OBJECT>
+<OBJECT name="System.Network.Ldap.SearchMode">0</OBJECT>
+<OBJECT name="System.Network.Ldap.SearchUser"></OBJECT>
+<OBJECT name="System.Network.Ldap.SearchUserPassword"></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.BaseDn"></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.Object"></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.Attribute"></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.AuthzMode">0</OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.BaseDn"></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.UPSGroupNameAttr"></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.UserNameAttr"></OBJECT>
+</SET_OBJECT>
