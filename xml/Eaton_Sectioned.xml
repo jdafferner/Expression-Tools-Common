@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><!--Syntax Ldap.Serveer[x].Whatever x = Ldap Server Number-->
 <SET_OBJECT>
-<OBJECT name="System.Network.Ldap.Server[x].IsEnable">0|0<!--Boolean as Int 0 | 1 , Read Write--></OBJECT>
-<OBJECT name="System.Network.Ldap.Server[x].ServerName">LDAP Server1|LDAP Server2<!--String 49 Character Max, Read Write--></OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].IsEnable">0|0<!--Boolean as Int 0 | 1--></OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].ServerName">LDAP Server1|LDAP Server2<!--String, 49 Character Max--></OBJECT>
 	<OBJECT name="System.Network.Ldap.Server[x].Port">389|389<!--Int Range 1 -65535--></OBJECT>
-<OBJECT name="System.Network.Ldap.Server[x].TimeOut">10|10<!--Int Range 0 - 65535--></OBJECT>
-<OBJECT name="System.Network.Ldap.AuthMechanism">0<!--Boolean 0 Simple | 1 MD5--></OBJECT>
-<OBJECT name="System.Network.Ldap.CheckServerCertificat">0</OBJECT>
-<OBJECT name="System.Network.Ldap.SSLMode">0</OBJECT>
-<OBJECT name="System.Network.Ldap.ServerType">0</OBJECT>
-<OBJECT name="System.Network.Ldap.SearchMode">0</OBJECT>
-<OBJECT name="System.Network.Ldap.SearchUser"></OBJECT>
-<OBJECT name="System.Network.Ldap.SearchUserPassword"></OBJECT>
-<OBJECT name="System.Network.Ldap.UserSearch.BaseDn"></OBJECT>
-<OBJECT name="System.Network.Ldap.UserSearch.Object"></OBJECT>
-<OBJECT name="System.Network.Ldap.UserSearch.Attribute"></OBJECT>
-<OBJECT name="System.Network.Ldap.GroupSearch.AuthzMode">0</OBJECT>
-<OBJECT name="System.Network.Ldap.GroupSearch.BaseDn"></OBJECT>
-<OBJECT name="System.Network.Ldap.GroupSearch.UPSGroupNameAttr"></OBJECT>
-<OBJECT name="System.Network.Ldap.GroupSearch.UserNameAttr"></OBJECT>
+<OBJECT name="System.Network.Ldap.Server[x].TimeOut">10|10<!--Int Range 0 - 65535 gussing this is in minutes.--></OBJECT>
+<OBJECT name="System.Network.Ldap.AuthMechanism">0<!--Int 0 | 1, where  0 is Simple and 1 is MD5--></OBJECT>
+<OBJECT name="System.Network.Ldap.CheckServerCertificat">0<!--Boolean as Int 0 | 1 Implies Check for Certificate or don't check certificate of LDAP Server--></OBJECT>
+<OBJECT name="System.Network.Ldap.SSLMode">0<!--Int 0,1,2 where: 0 is no SSL, 1 is LDAPS, 2 is TLS--></OBJECT>
+<OBJECT name="System.Network.Ldap.ServerType">0<!--Int 0 | 1, where 0 is Generic LDAP and 1 is Active Directory--></OBJECT>
+<OBJECT name="System.Network.Ldap.SearchMode">0<!--Int 0 | 1, where 0 is Anonymous Bind and 1 is User Bind--></OBJECT>
+<OBJECT name="System.Network.Ldap.SearchUser">IInIntInt Int 0Int 0 Int 0 |Int 0 | Int 0 | 1Int 0 | 1,Int 0 | 1, Int 0 | 1, wInt 0 | 1, whInt 0 | 1, wheInt 0 | 1, wherInt 0 | 1, whereInt 0 | 1, where Int 0 | 1, where 0Int 0 | 1, where 0 Int 0 | 1, where 0 iInt 0 | 1, where 0 isInt 0 | 1, where 0 is Int 0 | 1, where 0 is aInt 0 | 1, where 0 is anInt 0 | 1, where 0 is anoInt 0 | 1, where 0 is anonInt 0 | 1, where 0 is anonyInt 0 | 1, where 0 is anonymInt 0 | 1, where 0 is anonymoInt 0 | 1, where 0 is anonymouInt 0 | 1, where 0 is anonymousInt 0 | 1, where 0 is anonymous Int 0 | 1, where 0 is anonymous bInt 0 | 1, where 0 is anonymous biInt 0 | 1, where 0 is anonymous binInt 0 | 1, where 0 is anonymous bindInt 0 | 1, where 0 is anonymous bind Int 0 | 1, where 0 is anonymous bind aInt 0 | 1, where 0 is anonymous bind anInt 0 | 1, where 0 is anonymous bind andInt 0 | 1, where 0 is anonymous bind and Int 0 | 1, where 0 is anonymous bind and 1Int 0 | 1, where 0 is anonymous bind and 1 Int 0 | 1, where 0 is anonymous bind and 1 iInt 0 | 1, where 0 is anonymous bind and 1 isInt 0 | 1, where 0 is anonymous bind and 1 is Int 0 | 1, where 0 is anonymous bind and 1 is UInt 0 | 1, where 0 is anonymous bind and 1 is UsInt 0 | 1, where 0 is anonymous bind and 1 is UseInt 0 | 1, where 0 is anonymous bind and 1 is UserInt 0 | 1, where 0 is anonymous bind and 1 is User Int 0 | 1, where 0 is anonymous bind and 1 is User bInt 0 | 1, where 0 is anonymous bind and 1 is User biInt 0 | 1, where 0 is anonymous bind and 1 is User binInt 0 | 1, where 0 is anonymous bind and 1 is User bindInt 0 | 1, where 0 is anonymous bind and 1 is User bind Int 0 | 1, where 0 is anonymous bind and 1 is User bind sInt 0 | 1, where 0 is anonymous bind and 1 is User bind seInt 0 | 1, where 0 is anonymous bind and 1 is User bind seaInt 0 | 1, where 0 is anonymous bind and 1 is User bind searInt 0 | 1, where 0 is anonymous bind and 1 is User bind searcInt 0 | 1, where 0 is anonymous bind and 1 is User bind searchInt 0 | 1, where 0 is anonymous bind and 1 is User bind search<!--String, 249 Character Max, this is a query or a definition dependent on set/get for a user--></OBJECT>
+<OBJECT name="System.Network.Ldap.SearchUserPassword"><!--String, 49 Character Max, this seems to be a query or a definition dependent on set/get, I'm unsure if this is a password reset or used to pull from LDAP to check a password match.--></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.BaseDn"><!--String, 249 Character Max, this is a query or a definition dependent on set/get.  This search seems to target LDAP server--></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.Object"><!--String, 49 Character Max, this is a query or a definition dependent on set/get, I believe  this is a local object.--></OBJECT>
+<OBJECT name="System.Network.Ldap.UserSearch.Attribute"><!--String, 49 Character Max, this is a query or a definition dependent on set/get, Seems to be a seach based on an attribute that is crerated locally.--></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.AuthzMode">0<!--Int 0, 1 ,2 where 0 is No Authz, 1 is By User Attribut, 2 is By Group--></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.BaseDn"><!--String, 249 Character Max, this is a query or a definition dependent on set/get, Targets the LDAP Server--></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.UPSGroupNameAttr"><!--String, 49 Character Max, this is a query or a definition dependent on set/get, Defined search against an UPS Group, I'm assuming this is locally defined--></OBJECT>
+<OBJECT name="System.Network.Ldap.GroupSearch.UserNameAttr"><!--String, 49 Character Max, this is a query or a definition dependent on set/get, Seems to imply a search against an LDAP Server returns a Group given a UserNameAttribut--></OBJECT>
 </SET_OBJECT>

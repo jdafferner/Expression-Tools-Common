@@ -2,5 +2,20 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="libs/commons-io-2.5.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Expression-Tools-Common/libs/commons-io-2.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/commons-lang3-3.6.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Expression-Tools-Common/libs/commons-lang3-3.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/guava-23.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Expression-Tools-Common/libs/guava-23.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

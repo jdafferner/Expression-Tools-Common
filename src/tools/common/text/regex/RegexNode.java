@@ -5,11 +5,13 @@ import java.util.regex.PatternSyntaxException;
 
 
 public class RegexNode {
+	
 	private String regexname;
 	private String regexstring;
 	private Pattern regexpattern;
 	private static int counter;
 	private RegexNode mynode;
+	
 	public RegexNode(String name, String value){
 		counter++;
 		setNodeReference(this);
@@ -30,7 +32,7 @@ public class RegexNode {
 		try {
 		 regexpattern = Pattern.compile(regex);
 		}catch(PatternSyntaxException e){
-			System.out.print("Pattern cannot be compiled");
+			System.out.println("Pattern cannot be compiled");
 		}
 	}
 	public String getName() {
@@ -46,7 +48,7 @@ public class RegexNode {
 		return counter;
 	}
 	public RegexNode getNodeReference() {
-			return mynode;
+		return mynode;
 	}
 	public void deleteNode(RegexNode node) {
 		setName("");
@@ -57,10 +59,9 @@ public class RegexNode {
 	}
 	public String toCSVFile() {
 		return String.format("%s,%s\n", getName(),getRegexString());
-		}
+	}
 	@Override
 	public String toString() {
-		return String.format("Name is %s\nRegex is %s\n", getName(),getRegexString());
-		
+		return String.format("Name is %s\nRegex is %s\n", getName(),getRegexString());		
 	}
 }
