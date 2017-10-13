@@ -1,25 +1,30 @@
 package tools.common.text;
 
 
-import java.io.BufferedReader;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Path;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.Stream;
+
 
 import org.apache.commons.io.IOUtils;
+
+import tools.common.streams.StreamManager;
 
 public class TextUtilities {
 	
 	private ArrayList<?> text;
 	private int span;
 	private byte[] byteArray;
+	private final int cr = 15;
+	private final int lf = 12;
 	
 	public TextUtilities() {
 		text = new ArrayList<String>();
@@ -31,29 +36,42 @@ public class TextUtilities {
 	private int getSpan() {
 		return span;
 	}
-	private void setByteArray(byte[] bytes) {
-		
+	private boolean setByteArray(InputStream ins, int length) {
+		byteArray = new byte[length];
+		try {
+			if(ins.read(byteArray) > -1);
+			else {
+				return true;
+			}
+		} catch (IOException e) {
+			System.out.println("IOException in setByteArray()");
+			e.printStackTrace();
+		}
+		return false;
 	}
 	private byte[] getByteArray() {
 		return byteArray;
 	}
 	private void entryFile(File file) {
-		Path path;
-		try{
-			path = file.toPath();
-			
-		}catch(InvalidPathException e) {
-			System.out.println("Cannot resolve file path.");
-		}
+		int length = (int) file.length();
+			try {
+				FileInputStream fis = new FileInputStream(file);
+				setByteArray(fis, length);
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 	private void entryText() {
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(StreamManager.getSystemIn());
+		ByteArrayInputStream bis;
 		byte [] bytes = new byte[4000];
 		int z = 0;
 		System.out.println("Input text once finished press F5 to exit.");
 		while(scan.hasNextByte()) {
 			z++;
-			if(z > bytes.length) {
+			if(z > bytes.length) {											//make byte[] larger
 				int d = (bytes.length)*2;
 				byte [] temp = new byte[d];
 				for(int i = 0; i < bytes.length; i++ ) {
@@ -64,7 +82,7 @@ public class TextUtilities {
 				temp = null;
 			}
 			byte b = scan.nextByte();
-			if(b == 95) {
+			if(b == 95) {													//byte value as int (F5)
 				break;
 			}
 			else {
@@ -72,13 +90,13 @@ public class TextUtilities {
 			}
 		}
 		scan.close();
+		int length = z;
+		bis = new ByteArrayInputStream(bytes);
+		setByteArray(bis, length);
 	}
-	private void writeArrayList(byte[] bytes) {
-		text = new ArrayList<String>();
-		int r = bytes.length;
+	private void setArrayList() {
 		
 	}
-
 	public ArrayList<?> getTextArrayList(){										//text ArrayList pointer
 		return text;
 	}
