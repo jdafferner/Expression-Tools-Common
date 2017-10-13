@@ -2,3 +2,4 @@ singleWindowsFileSeparator,\\
 doubleWindowsFileSeparator,\\\\
 windowsFilePathModel,(?=[A-Z]:\\\\)
 nixxyFilePathModel,(?=\\/\\S)
+MatchWord, (\S+\S)
